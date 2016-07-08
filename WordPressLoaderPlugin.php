@@ -11,7 +11,7 @@ class WordPressLoaderPlugin implements PluginInterface
 {
     public function activate(Composer $composer, IOInterface $io)
     {
-        $installer = new LibraryInstaller($io, $composer);
+        $installer = new LibraryInstaller($io, $composer, 'wordpress-loader');
         $composer->getInstallationManager()->addInstaller($installer);
     }
 }
