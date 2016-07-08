@@ -2,6 +2,9 @@
     "name": "johnnypea/wordpress-loader-type",
     "type": "composer-plugin",
     "license": "MIT",
+    "autoload": {
+        "psr-4": {"Webikon\\Composer\\": ""}
+    },
     "extra": {
         "class": "Webikon\\Composer\\WordPressLoaderPlugin"
     },
