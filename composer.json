@@ -6,7 +6,7 @@
         "psr-0": {"Webikon\\Composer\\": "src/"}
     },
     "extra": {
-        "class": "Webikon\\Composer\\WordPressLoaderPlugin\\"
+        "class": "Webikon\\Composer\\WordPressLoaderPlugin"
     },
     "require": {
         "composer-plugin-api": "^1.0"
