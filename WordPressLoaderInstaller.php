@@ -12,6 +12,14 @@ class WordPressLoaderInstaller extends LibraryInstaller
      */
     public function getInstallPath(PackageInterface $package)
     {
+        $type = $package->getType();
+        $prettyName = $package->getPrettyName();
+        if (strpos($prettyName, '/') !== false) {
+            list($vendor, $name) = explode('/', $prettyName);
+        } else {
+            $vendor = '';
+            $name = $prettyName;
+        }
 
         if ($this->composer->getPackage()) {
             $extra = $this->composer->getPackage()->getExtra();
