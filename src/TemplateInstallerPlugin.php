@@ -1,16 +1,16 @@
 <?php
 
-namespace Webikon\Composer\Installer;
+namespace Webikon\Composer;
 
 use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Plugin\PluginInterface;
 
-class TemplateInstallerPlugin implements PluginInterface
+class WordPressLoaderPlugin implements PluginInterface
 {
     public function activate(Composer $composer, IOInterface $io)
     {
-        $installer = new TemplateInstaller($io, $composer);
+        $installer = new LibraryInstaller($io, $composer);
         $composer->getInstallationManager()->addInstaller($installer);
     }
 }

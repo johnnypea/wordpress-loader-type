@@ -1,8 +1,14 @@
 {
-    "name": "johnnypea/wordpress-loader-type",
-    "type": "wordpress-loader",
+    "name": "johnnypea/template-installer-plugin",
+    "type": "composer-plugin",
     "license": "MIT",
     "autoload": {
-        "psr-4": {"Webikon\\Composer\\Installer\\": "src"}
+        "psr-0": {"Webikon\\Composer": "src/"}
+    },
+    "extra": {
+        "class": "Webikon\\Composer\\WordPressLoaderPlugin"
+    },
+    "require": {
+        "composer-plugin-api": "^1.0"
     }
 }
