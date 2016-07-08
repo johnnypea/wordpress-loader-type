@@ -22,7 +22,7 @@ class WordPressLoaderInstaller extends LibraryInstaller
         }
 
         $availableVars = $this->inflectPackageVars(compact('name', 'vendor', 'type'));
-        
+
         if ($this->composer->getPackage()) {
             $extra = $this->composer->getPackage()->getExtra();
             if (!empty($extra['installer-paths'])) {
@@ -36,6 +36,17 @@ class WordPressLoaderInstaller extends LibraryInstaller
         return 'wordpress/wp-content/mu-plugins/';
     }
 
+    /**
+     * For an installer to override to modify the vars per installer.
+     *
+     * @param  array $vars
+     * @return array
+     */
+    public function inflectPackageVars($vars)
+    {
+        return $vars;
+    }
+    
     /**
      * Replace vars in a path
      *
