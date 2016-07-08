@@ -21,6 +21,8 @@ class WordPressLoaderInstaller extends LibraryInstaller
             $name = $prettyName;
         }
 
+        $availableVars = $this->inflectPackageVars(compact('name', 'vendor', 'type'));
+        
         if ($this->composer->getPackage()) {
             $extra = $this->composer->getPackage()->getExtra();
             if (!empty($extra['installer-paths'])) {
