@@ -3,7 +3,7 @@
     "type": "composer-plugin",
     "license": "MIT",
     "autoload": {
-        "psr-0": {"Webikon\\Composer\\": "src/"}
+        "psr-4": {"Webikon\\Composer\\": "src/"}
     },
     "extra": {
         "class": "Webikon\\Composer\\WordPressLoaderPlugin"
